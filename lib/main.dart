@@ -19,7 +19,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: Colors.white,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.white,
+          elevation: 0,
+          iconTheme: IconThemeData(color: Colors.black),
+        ),
       ),
+      debugShowCheckedModeBanner: false,
       home: const AuthGate(),
     );
   }

@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart' hide EmailAuthProvider;
 import 'package:firebase_ui_auth/firebase_ui_auth.dart';
+import 'package:firebase_ui_oauth_google/firebase_ui_oauth_google.dart'; // new
 import 'package:flutter/material.dart';
 
 import 'home.dart';
@@ -16,13 +17,14 @@ class AuthGate extends StatelessWidget {
           return SignInScreen(
             providers: [
               EmailAuthProvider(),
+              GoogleProvider(clientId: "YOUR_WEBCLIENT_ID"), // new
             ],
             headerBuilder: (context, constraints, shrinkOffset) {
               return Padding(
                 padding: const EdgeInsets.all(20),
                 child: AspectRatio(
                   aspectRatio: 1,
-                  child: Image.asset('flutterfire_300x.png'),
+                  child: Image.asset('assets/images/app_logo.png'),
                 ),
               );
             },
@@ -30,8 +32,8 @@ class AuthGate extends StatelessWidget {
               return Padding(
                 padding: const EdgeInsets.symmetric(vertical: 8.0),
                 child: action == AuthAction.signIn
-                    ? const Text('Welcome to FlutterFire, please sign in!')
-                    : const Text('Welcome to Flutterfire, please sign up!'),
+                    ? const Text('Welcome to HealSync, please sign in!')
+                    : const Text('Welcome to HealSync, please sign up!'),
               );
             },
             footerBuilder: (context, action) {
@@ -48,12 +50,13 @@ class AuthGate extends StatelessWidget {
                 padding: const EdgeInsets.all(20),
                 child: AspectRatio(
                   aspectRatio: 1,
-                  child: Image.asset('flutterfire_300x.png'),
+                  child: Image.asset('assets/images/app_logo.png'),
                 ),
               );
             },
           );
         }
+
         return const HomeScreen();
       },
     );
