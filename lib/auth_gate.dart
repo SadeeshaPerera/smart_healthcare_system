@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart' hide EmailAuthProvider;
 import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 import 'package:firebase_ui_oauth_google/firebase_ui_oauth_google.dart'; // new
 import 'package:flutter/material.dart';
+import 'package:smart_healthcare_system/admin/admin_dashboard.dart';
 
 import 'home.dart';
 
@@ -37,12 +38,27 @@ class AuthGate extends StatelessWidget {
               );
             },
             footerBuilder: (context, action) {
-              return const Padding(
-                padding: EdgeInsets.only(top: 16),
-                child: Text(
-                  'By signing in, you agree to our terms and conditions.',
-                  style: TextStyle(color: Colors.grey),
-                ),
+              return Column(
+                children: [
+                  const Padding(
+                    padding: EdgeInsets.only(top: 16),
+                    child: Text(
+                      'By signing in, you agree to our terms and conditions.',
+                      style: TextStyle(color: Colors.grey),
+                    ),
+                  ),
+                  const SizedBox(height: 16),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const AdminDashboard()),
+                      );
+                    },
+                    child: const Text('Other User?'),
+                  ),
+                ],
               );
             },
             sideBuilder: (context, shrinkOffset) {
