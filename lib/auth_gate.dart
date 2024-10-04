@@ -50,11 +50,7 @@ class AuthGate extends StatelessWidget {
                   const SizedBox(height: 16),
                   TextButton(
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const AdminDashboard()),
-                      );
+                      Navigator.pushNamed(context, '/admin_registration');
                     },
                     child: const Text('Other User?'),
                   ),

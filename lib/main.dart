@@ -1,5 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:smart_healthcare_system/admin/admin_dashboard.dart';
+import 'package:smart_healthcare_system/admin/admin_login_page.dart';
+import 'package:smart_healthcare_system/admin/admin_register_page.dart';
 import 'package:smart_healthcare_system/firebase_options.dart';
 import 'auth_gate.dart';
 
@@ -28,7 +31,13 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: const AuthGate(),
+      // initialRoute: '/',
+      routes: {
+        '/': (context) => const AuthGate(),
+        '/admin_login': (context) => AdminLoginPage(),
+        '/admin_registration': (context) => AdminRegisterPage(),
+        '/admin_dashboard': (context) => AdminDashboard(),
+      },
     );
   }
 }
