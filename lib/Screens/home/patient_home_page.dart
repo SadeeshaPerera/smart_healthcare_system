@@ -63,6 +63,7 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
+
     _getUser();
     _doctorName = new TextEditingController();
     _categories = _getCategories();
@@ -74,7 +75,10 @@ class _HomePageState extends State<HomePage> {
         .then((value) {
       loggedInUser = UserModel.fromMap(value.data());
       setState(() {
-        sleep(Duration(microseconds: 10));
+        Future<void> _updateMessageWithDelay() async {
+          await Future.delayed(Duration(microseconds: 10));
+        }
+
         isLoading = false;
       });
     });
@@ -92,7 +96,10 @@ class _HomePageState extends State<HomePage> {
     var today_date =
         (new DateFormat('dd-MM-yyyy')).format(DateTime.now()).toString();
 
-    sleep(Duration(seconds: 1));
+    Future<void> _updateMessageWithDelay() async {
+      await Future.delayed(Duration(seconds: 1));
+    }
+
     var _message;
     DateTime now = DateTime.now();
     String _currentHour = DateFormat('kk').format(now);
