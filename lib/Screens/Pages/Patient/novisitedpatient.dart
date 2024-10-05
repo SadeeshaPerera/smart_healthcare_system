@@ -45,7 +45,10 @@ class _notvisitedState extends State<notvisited> {
         .then((value) {
       loggedInUser = DoctorModel.fromMap(value.data());
       setState(() {
-        sleep(Duration(microseconds: 10));
+        Future<void> _updateMessageWithDelay() async {
+          await Future.delayed(Duration(microseconds: 10));
+        }
+
         isLoading = false;
       });
     });

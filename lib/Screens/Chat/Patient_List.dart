@@ -36,7 +36,10 @@ class _Patient_ListState extends State<Patient_List> {
       loggedInUser = DoctorModel.fromMap(value.data());
 
       setState(() {
-        sleep(Duration(seconds: 1));
+        Future<void> _updateMessageWithDelay() async {
+          await Future.delayed(Duration(seconds: 1));
+        }
+
         isLoading = false;
       });
     });
