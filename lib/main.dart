@@ -1,43 +1,28 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:smart_healthcare_system/admin/admin_dashboard.dart';
-import 'package:smart_healthcare_system/admin/admin_login_page.dart';
-import 'package:smart_healthcare_system/admin/admin_register_page.dart';
-import 'package:smart_healthcare_system/firebase_options.dart';
-import 'auth_gate.dart';
+import 'package:flutter/services.dart';
+import 'constants.dart';
+import 'Screens/splash_view.dart';
+import 'firebase_options.dart';
 
-void main() async {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  runApp(MyApp());
 
-  runApp(const MyApp());
+  SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle(statusBarColor: kPrimaryLightdark));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'HealSync | Smart Healthcare System',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        scaffoldBackgroundColor: Colors.white,
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.white,
-          elevation: 0,
-          iconTheme: IconThemeData(color: Colors.black),
-        ),
-      ),
-      debugShowCheckedModeBanner: false,
-      // initialRoute: '/',
-      routes: {
-        '/': (context) => const AuthGate(),
-        '/admin_login': (context) => AdminLoginPage(),
-        '/admin_registration': (context) => AdminRegisterPage(),
-        '/admin_dashboard': (context) => AdminDashboard(),
-      },
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'HealthCare',
+        theme: ThemeData(
+            primarySwatch: Colors.indigo,
+            appBarTheme: AppBarTheme(color: kPrimaryColor)),
+        home: SplashView());
   }
 }
