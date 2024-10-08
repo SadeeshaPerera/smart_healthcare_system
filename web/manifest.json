@@ -1,6 +1,6 @@
 {
-    "name": "smart_healthcare_system",
-    "short_name": "smart_healthcare_system",
+    "name": "hospital_appointment",
+    "short_name": "hospital_appointment",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

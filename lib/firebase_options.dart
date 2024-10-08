@@ -47,29 +47,31 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBm9yt-2xjS7xxXhzN4I2jhCYXMxbnm1Bs',
-    appId: '1:561754184188:web:1342a5aef8c38684eefa79',
-    messagingSenderId: '561754184188',
-    projectId: 'csse-project-healthcare-app',
-    authDomain: 'csse-project-healthcare-app.firebaseapp.com',
-    storageBucket: 'csse-project-healthcare-app.appspot.com',
-    measurementId: 'G-Z50TS0PYWV',
+    apiKey: 'AIzaSyBoDTbsXJNfPgua42fAJ8lwzL27XEJKmzo',
+    appId: '1:928979492934:web:0068650e0bebf6d1266a47',
+    messagingSenderId: '928979492934',
+    projectId: 'healthcare-6657b',
+    authDomain: 'healthcare-6657b.firebaseapp.com',
+    storageBucket: 'healthcare-6657b.appspot.com',
+    measurementId: 'G-5PHHSFBP04',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBYZTlNBqI3gIQwvnd8atdcQoBM3JHPH88',
-    appId: '1:561754184188:android:eefaee100dcbf185eefa79',
-    messagingSenderId: '561754184188',
-    projectId: 'csse-project-healthcare-app',
-    storageBucket: 'csse-project-healthcare-app.appspot.com',
+    apiKey: 'AIzaSyD3j_NcyMhn6nZlq8PdfP6owXv0XiYEtzs',
+    appId: '1:928979492934:android:45ebde2a69dab05c266a47',
+    messagingSenderId: '928979492934',
+    projectId: 'healthcare-6657b',
+    storageBucket: 'healthcare-6657b.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyB_34OqHbBOlJxBI7o4vjyvRkq8F7YAcWg',
-    appId: '1:561754184188:ios:8b2a4c88a10dda85eefa79',
-    messagingSenderId: '561754184188',
-    projectId: 'csse-project-healthcare-app',
-    storageBucket: 'csse-project-healthcare-app.appspot.com',
-    iosBundleId: 'com.example.smartHealthcareSystem',
+    apiKey: 'AIzaSyCAqAxjM63ZSTw5_zjdHWAhKl1VFcVvrM8',
+    appId: '1:928979492934:ios:cc98424549e5bc3b266a47',
+    messagingSenderId: '928979492934',
+    projectId: 'healthcare-6657b',
+    storageBucket: 'healthcare-6657b.appspot.com',
+    iosClientId:
+        '928979492934-d6ih5ks88jiuvtrj5vtit51aj4qt9uvc.apps.googleusercontent.com',
+    iosBundleId: 'com.example.hospitalAppointment',
   );
 }
