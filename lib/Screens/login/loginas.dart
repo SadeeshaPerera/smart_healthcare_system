@@ -2,6 +2,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:hospital_appointment/admin/hospital_staff_home.dart';
+import 'package:hospital_appointment/hospital_staff_login.dart';
 import '../../Screens/login/patientlogin.dart';
 import 'package:internet_connection_checker_plus/internet_connection_checker_plus.dart';
 import '../home/patient_home_page.dart';
@@ -98,7 +100,7 @@ class _LoginasState extends State<Loginas> {
           ),
           Container(
             child: Padding(
-              padding: const EdgeInsets.only(top: 80),
+              padding: const EdgeInsets.fromLTRB(0, 50, 0, 0),
               child: Center(
                   child: Text(
                 "Select What You Are?",
@@ -117,7 +119,7 @@ class _LoginasState extends State<Loginas> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Container(
-                    height: 220,
+                    height: 250,
                     decoration: BoxDecoration(
                       color: Colors.black26.withOpacity(0.25),
                       borderRadius: BorderRadius.circular(20),
@@ -178,6 +180,40 @@ class _LoginasState extends State<Loginas> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (contex) => login_page()));
+                              },
+                              style: ElevatedButton.styleFrom(
+                                elevation: 2,
+                                backgroundColor: Colors.deepPurple[600],
+                                foregroundColor: Colors.deepPurple[600],
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(32.0),
+                                ),
+                              ),
+                            ),
+                          ),
+                          padding: const EdgeInsets.all(16),
+                          alignment: Alignment.center,
+                        ),
+                        Container(
+                          width: MediaQuery.of(context).size.width / 1.1,
+                          child: SizedBox(
+                            width: double.infinity,
+                            height: 50.0,
+                            child: ElevatedButton(
+                              child: Text(
+                                "Hospital Staff",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (contex) =>
+                                            HospitalStaffLoginPage()));
                               },
                               style: ElevatedButton.styleFrom(
                                 elevation: 2,
