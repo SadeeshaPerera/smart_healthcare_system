@@ -1,7 +1,7 @@
 
 # EDoc -- Smart Healthcare System
 
-This is an application designed to streamline the process of managing healthcare operations.
+This is smart application designed to streamline the process of managing healthcare operations.
 
 
 ## Main Features
