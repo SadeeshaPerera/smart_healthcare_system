@@ -187,6 +187,13 @@
                         <input type="submit"  name="filter" value=" Filter" class=" btn-primary-soft btn button-icon btn-filter"  style="padding: 15px; margin :0;width:100%">
                         </form>
                     </td>
+                    <td width="12%">
+                        <a href="reports.php">
+                            <button type="button" class="btn-primary-soft btn button-icon btn-report" style="padding: 15px; margin: 0; width: 100%">
+                                Reports
+                            </button>
+                        </a>
+                    </td>
 
                     </tr>
                             </table>
