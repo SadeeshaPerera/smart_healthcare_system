@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:hospital_appointment/admin/patient_records_page.dart';
 
 class HospitalStaffHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:
-            Text('Hospital Staff Home', style: TextStyle(color: Colors.white)),
+        title: Text('Hospital Staff Dashboard',
+            style: TextStyle(color: Colors.white)),
         //change back button color
         iconTheme: IconThemeData(color: Colors.white),
         backgroundColor: Colors.deepPurple[600],
@@ -49,7 +50,13 @@ class HospitalStaffHome extends StatelessWidget {
                                     color: Colors.deepPurple[600]),
                                 title: Text('Check Patient Records'),
                                 onTap: () {
-                                  // Navigate to patient records page
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) =>
+                                          PatientRecordsPage(),
+                                    ),
+                                  );
                                 },
                               ),
                               ListTile(
