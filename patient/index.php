@@ -104,11 +104,20 @@
                         <a href="appointment.php" class="non-style-link-menu"><div><p class="menu-text">My Bookings</p></a></div>
                     </td>
                 </tr>
+                
                 <tr class="menu-row" >
                     <td class="menu-btn menu-icon-settings">
                         <a href="settings.php" class="non-style-link-menu"><div><p class="menu-text">Settings</p></a></div>
                     </td>
+                    
                 </tr>
+                <tr class="menu-row" >
+                    <td class="menu-btn menu-payment">
+                        <a href="payment.php" class="non-style-link-menu"><div><p class="menu-text">Pay Fees</p></a></div>
+                    </td>
+                    
+                </tr>
+                
                 
             </table>
         </div>
