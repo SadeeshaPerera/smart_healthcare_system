@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/animations.css">  
     <link rel="stylesheet" href="../css/main.css">  
     <link rel="stylesheet" href="../css/admin.css">
+    
         
     <title>Dashboard</title>
     <style>
@@ -113,7 +114,7 @@
                 </tr>
                 <tr class="menu-row" >
                     <td class="menu-btn menu-payment">
-                        <a href="payment.php" class="non-style-link-menu"><div><p class="menu-text">Pay Fees</p></a></div>
+                        <a href="payment-dashboard.php" class="non-style-link-menu"><div><p class="menu-text">Pay Fees</p></a></div>
                     </td>
                     
                 </tr>

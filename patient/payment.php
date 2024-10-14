@@ -12,6 +12,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            margin: 0;
         }
         .payment-container {
             background-color: #fff;
@@ -22,6 +23,7 @@
         }
         .payment-container h2 {
             margin-bottom: 20px;
+            text-align: center;
         }
         .payment-container input[type="text"],
         .payment-container input[type="number"],
@@ -43,6 +45,11 @@
         }
         .error {
             color: red;
+            margin: 10px 0;
+        }
+        .success {
+            color: green;
+            margin: 10px 0;
         }
     </style>
 </head>
@@ -104,7 +111,7 @@
 
         if (empty($errors)) {
             echo "<div class='payment-container'>";
-            echo "<h2>Payment Details Submitted</h2>";
+            echo "<h2 class='success'>Payment Details Submitted</h2>";
             echo "<p>Name on Card: $name</p>";
             echo "<p>Card Number: $card_number</p>";
             echo "<p>Expiration Date: $exp_date</p>";
